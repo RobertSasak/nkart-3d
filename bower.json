@@ -1,0 +1,28 @@
+{
+  "name": "nkart-3d",
+  "version": "0.0.0",
+  "authors": [
+    "RobertSasak <robert.sasak@gmail.com>"
+  ],
+  "description": "3D map of Norway.",
+  "main": "index.html",
+  "keywords": [
+    "norgeskart",
+    "nkart",
+    "norge",
+    "kart",
+    "map",
+    "norway"
+  ],
+  "license": "MIT",
+  "homepage": "nkart.no",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
