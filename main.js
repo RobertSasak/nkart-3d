@@ -29,7 +29,7 @@
 			url: 'http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom={z}&x={x}&y={y}#',
 			maximumLevel: 18,
 			fileExtension: '',
-			credit: ''
+			credit: new Cesium.Credit("CC-BY Kartverket", "", "http://www.kartverket.no/")
 		});
 
 		provider.requestImage = function (x, y, level) {
