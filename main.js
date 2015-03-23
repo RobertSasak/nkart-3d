@@ -26,7 +26,7 @@
 
 	function initLayer() {
 		var provider = new Cesium.TileMapServiceImageryProvider({
-			url: 'http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom={z}&x={x}&y={y}#',
+			url: 'http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}#',
 			maximumLevel: 18,
 			fileExtension: '',
 			credit: new Cesium.Credit("CC-BY Kartverket", "", "http://www.kartverket.no/")
