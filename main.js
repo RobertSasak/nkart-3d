@@ -23,12 +23,20 @@
 
 	function initTerrain() {
 		var cesiumTerrainProviderMeshes = new Cesium.CesiumTerrainProvider({
-			url: '//cesiumjs.org/stk-terrain/tilesets/world/tiles',
-			//url: '//assets.agi.com/stk-terrain/world',
+			url: '//assets.agi.com/stk-terrain/world',
 			credit: '',
-			requestWaterMask: true,
+			//requestWaterMask: true,
+			//requestVertexNormals: true
 		});
+		viewer.scene.globe.enableLighting = true;
 		scene.terrainProvider = cesiumTerrainProviderMeshes;
+	}
+
+	function flyTo() {
+		viewer.scene.camera.flyTo({
+			destination: Cesium.Cartesian3.fromDegrees(5.338519, 60.394673, 1000000.0),
+			duration: 5
+		});
 	}
 
 	// Home position
@@ -45,5 +53,6 @@
 	var scene = viewer.scene;
 
 	initTerrain();
+	flyTo();
 
 })(Cesium);
