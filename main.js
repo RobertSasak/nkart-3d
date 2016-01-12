@@ -11,6 +11,7 @@
 		});
 
 		provider.requestImage = function (x, y, level) {
+			console.log(x, y);
 			var url = this._url
 				.replace('{x}', x)
 				.replace('{y}', y)
@@ -28,8 +29,7 @@
 			//requestWaterMask: true,
 			//requestVertexNormals: true
 		});
-		viewer.scene.globe.enableLighting = true;
-		scene.terrainProvider = cesiumTerrainProviderMeshes;
+		return cesiumTerrainProviderMeshes;
 	}
 
 	function flyTo() {
@@ -44,13 +44,14 @@
 
 	var viewer = new Cesium.Viewer('cesiumContainer', {
 		imageryProvider: getProviderForNorgeskart(),
+		terrainProvider: initTerrain(),
 		baseLayerPicker: false,
 		animation: false,
 		timeline: false,
 		sceneModePicker: false,
 	});
 
-	var scene = viewer.scene;
+	viewer.scene.globe.enableLighting = true;
 
 	initTerrain();
 	flyTo();
