@@ -3,23 +3,11 @@
 (function (Cesium) {
 
 	function getProviderForNorgeskart() {
-		var provider = new Cesium.TileMapServiceImageryProvider({
-			url: 'http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}#',
-			maximumLevel: 18,
-			fileExtension: '',
-			credit: new Cesium.Credit("CC-BY Kartverket", "", "http://www.kartverket.no/")
+		return new Cesium.UrlTemplateImageryProvider({
+			url: 'http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}',
+			credit: new Cesium.Credit("CC-BY Kartverket", "", "http://www.kartverket.no/"),
+			maximumLevel: 18
 		});
-
-		provider.requestImage = function (x, y, level) {
-			console.log(x, y);
-			var url = this._url
-				.replace('{x}', x)
-				.replace('{y}', y)
-				.replace('{z}', level);
-
-			return Cesium.ImageryProvider.loadImage(this, url);
-		};
-		return provider;
 	}
 
 	function initTerrain() {
