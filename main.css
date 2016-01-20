@@ -1,0 +1,86 @@
+@import url(http://cesiumjs.org/releases/1.17/Build/Cesium/Widgets/widgets.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,800);
+
+#cesiumContainer {
+	position: absolute;
+	width: 100%;
+	top: 60px;
+	left: 0;
+	margin: 0;
+	bottom: 0;
+	overflow: hidden;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Open Sans',sans-serif;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	height: 100%;
+}
+
+.menu {
+	height: 60px;
+	width: 100%;
+	background-color: #E60000;
+	padding-left: 1vw;
+
+}
+
+.menu h1 {
+	margin: 0;
+	font-size: 35px;
+	line-height: 35px;
+	display: inline-block;
+}
+
+.menu a {
+	color: white;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	text-decoration: underline;
+}
+
+.menu img {
+	vertical-align: middle;
+}
+
+.menu ul {
+	display: inline-block;
+	/*white-space: nowrap;*/
+	/*overflow: hidden;*/
+	/*margin: 0;*/
+	padding-left: 1vw;
+}
+
+.menu li {
+	padding-right: 1vw;
+	display: inline-block;
+	font-size: 20px;
+	line-height: 35px;
+}
+
+.menu li.active {
+	font-weight: bold;
+}
+
+@media (max-width: 600px) {
+	.menu li {
+		font-size: 12px;
+	}
+	.menu h1 {
+		font-size: 18px;
+	}
+}
+
+.cesium-credit-image:first-child {
+	display: none;
+}
