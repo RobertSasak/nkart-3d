@@ -4,8 +4,9 @@
 
 	function getProviderForNorgeskart() {
 		return new Cesium.UrlTemplateImageryProvider({
-			url: 'http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}',
-			credit: new Cesium.Credit("CC-BY Kartverket", "", "http://www.kartverket.no/"),
+			//url: 'http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}',
+			url: 'http://d38powbd92mmpv.cloudfront.net/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}',
+			credit: new Cesium.Credit('CC-BY Kartverket', '', 'http://www.kartverket.no/'),
 			maximumLevel: 18
 		});
 	}
